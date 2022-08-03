@@ -1,0 +1,19 @@
+name: build mount-zip
+
+on: push
+
+jobs:
+  build:
+    name: build
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: install deps
+        run: |
+          brew update
+          brew install boost libzip icu4c
+
+      - name: build
+        run: |
+          make
