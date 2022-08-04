@@ -12,7 +12,8 @@ jobs:
       - name: install deps
         run: |
           brew update
-          brew install boost libzip icu4c
+          brew install boost
+          brew cask install osxfuse
 
       - name: build
         run: |
