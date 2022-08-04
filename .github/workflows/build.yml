@@ -13,7 +13,7 @@ jobs:
         run: |
           brew update
           brew install boost
-          brew cask install osxfuse
+          brew install --cask osxfuse
 
       - name: build
         run: |
